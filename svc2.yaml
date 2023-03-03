@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app.kubernetes.io/component":"alertmanager","app.kubernetes.io/name":"prometheus"},"name":"prometheus-alertmanager-operated","namespace":"prometheus","ownerReferences":[{"apiVersion":"app.k8s.io/v1beta1","blockOwnerDeletion":true,"kind":"Application","name":"prometheus","uid":"36962a95-2521-4e53-a23d-03b7b160ef5e"}]},"spec":{"clusterIP":"None","ports":[{"name":"mesh","port":6783,"protocol":"TCP","targetPort":6783},{"name":"http","port":9093,"protocol":"TCP","targetPort":9093}],"selector":{"k8s-app":"alertmanager"},"type":"ClusterIP"}}
+  creationTimestamp: "2023-03-03T11:18:49Z"
+  labels:
+    app.kubernetes.io/component: alertmanager
+    app.kubernetes.io/name: prometheus
+  name: prometheus-alertmanager-operated
+  namespace: prometheus
+  ownerReferences:
+  - apiVersion: app.k8s.io/v1beta1
+    blockOwnerDeletion: true
+    kind: Application
+    name: prometheus
+    uid: 36962a95-2521-4e53-a23d-03b7b160ef5e
+  resourceVersion: "94375"
+  uid: 55400de7-8bfd-49fa-b764-722b54001604
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: mesh
+    port: 6783
+    protocol: TCP
+    targetPort: 6783
+  - name: http
+    port: 9093
+    protocol: TCP
+    targetPort: 9093
+  selector:
+    k8s-app: alertmanager
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

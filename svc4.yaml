@@ -1,0 +1,2 @@
+NAME                    TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)    AGE
+prometheus-prometheus   ClusterIP   10.3.253.45   <none>        9090/TCP   70m

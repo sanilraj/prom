@@ -1,0 +1,40 @@
+apiVersion: v1
+data:
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIELTCCApWgAwIBAgIRALekFT2WfMhzaeFPhpQ+nVcwDQYJKoZIhvcNAQELBQAw
+    LzEtMCsGA1UEAxMkZDRlZjBhYWUtOGFkZC00NWFkLWEwM2UtYWMwZDY2MTE3ZWJl
+    MCAXDTIzMDMwMzA3MDcxOVoYDzIwNTMwMjIzMDgwNzE5WjAvMS0wKwYDVQQDEyRk
+    NGVmMGFhZS04YWRkLTQ1YWQtYTAzZS1hYzBkNjYxMTdlYmUwggGiMA0GCSqGSIb3
+    DQEBAQUAA4IBjwAwggGKAoIBgQCdyMoQwF/m1VAOdVBssZscXK1J3vrDPLeiapQr
+    jBa9O5fS4p1g8XJLmBKNsszZLevNWM+mnvhg5TxsQw7G+VUp64JsVbdTOZpKhbMf
+    xpc88FQQ3fiegX0ipCCF+b1fiTXfKKFTQdScNox5NiCb8HhvqOk9uz7FFvCMPWui
+    2mUHaGkaJahYsjeSeL+z7UJjHI+bkMaXq7KC2fOzs6Xi+o3tOkpnLGsz8tGY7eCN
+    AVGHVRR6gpRpsHQYjDjktxT7KQnJTgCDl0GEaaXM18nnZRThSbqJ/xNpcmqpluzU
+    C+DMPZFieG24LjMmWsduAV16VnpkwbwG/aS+/iOJUYxVqtEdrKKK/VOJ3CtqqtuZ
+    cYA6sBH+horLdt5rJWP5RIRS0TuVwjUI4T4U0wrodgkh0GeVkt4bME5FYtpw2JYL
+    q4YK70cPshHnK2r8kabreKIZyfIu8XKl0DIJXroULvJ5BvJaP8SPOyLIsxWMFE9S
+    p3Gu5V5Zpprex6LVGoYatpvtEs8CAwEAAaNCMEAwDgYDVR0PAQH/BAQDAgIEMA8G
+    A1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFHQ6aoPx22FC2NVQlaO8pP9QZ9zLMA0G
+    CSqGSIb3DQEBCwUAA4IBgQBWmny3+xIjklbu/xet7nieJ519zpLLb8oYto+Xi6Vb
+    DBdGdKrF5HoH6dVkUX1eBUV8qoIk+mB0ZuK4StorA4D5PpjVnc4i0t/CTaLfmDeS
+    Z8mAaulxexlyiILO3F5Mx7v3BjsCOCbh08knmi4r9DQFujGpNfG30qNfSc7GWRSq
+    sIrdl2MdQ3vaWtsBpjJxMSZclctTATe1PSE2q33rz1Y9jXrOS027aW54UONCDjxn
+    DeKdFTtZbJHn425XLQC+PwMa3KNklFZHKgT3infHq3a818YmQvibz6pyiRYFQA0n
+    yCL0A6LuKqAPtL/ayacvBaERrUIimHqzeSWfBIK6SqyxKDruxziE+6TpRl+2gc0t
+    qCgh/LjugKGrf48GrdQ3L8t97SKtCB78ygf5NJKeNDGhqGnp29EYHFwGs0xWbX01
+    e42bsqhTt1Cl8c5+ut4wVy7tacrQUgPQcS3w8lLYq/yo1J+zo1+IoQG6f1xzlpw6
+    sLDqQwXQLL/e8eU8bYHa12U=
+    -----END CERTIFICATE-----
+kind: ConfigMap
+metadata:
+  annotations:
+    kubernetes.io/description: Contains a CA bundle that can be used to verify the
+      kube-apiserver when using internal endpoints such as the internal service IP
+      or kubernetes.default.svc. No other usage is guaranteed across distributions
+      of Kubernetes clusters.
+  creationTimestamp: "2023-03-03T11:18:27Z"
+  name: kube-root-ca.crt
+  namespace: prometheus
+  resourceVersion: "94156"
+  uid: a979a20a-f6c2-4964-a98c-971a74eaca7e
